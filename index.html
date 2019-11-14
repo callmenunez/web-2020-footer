@@ -21,7 +21,7 @@
       font-size: 18px; 
       line-height: 18px;
       font-weight: 600;
-      margin-bottom: 20px;
+      margin: 0 0 20px;
     }
     a {
       display: block;
@@ -31,6 +31,49 @@
       text-decoration: none;
       padding: 10px 0;
       font-weight: 300;
+    }
+    hr {
+      width: 1px;
+      height: 400px;
+      border-left: 1px solid #000000;
+      margin: 0 auto;
+    }
+    .call-us p, .call-us a {
+      font-size: 21px;
+      font-weight: 300;
+      display: inline-block;
+    }
+    .online-help {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+    .online-help p {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    .social-icons {
+      display: flex;
+    }
+    .social-icons a {
+      margin-left: 10px;
+    }
+    .small-business-blog h3 {
+      font-size: 30px;
+      line-height: 37px;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+    .small-business-blog .small-business-text-w-image {
+      display: flex;
+      align-items: flex-start;
+    }
+    .small-business-blog .small-business-text-w-image img {
+      margin-right: 24px;
+    }
+    .small-business-blog .small-business-text {
     }
   </style>
   <!-- HTML5 Shiv, this allows older versions of ie9 to accept html5. Must live in the header, below any stylesheets -->
@@ -99,9 +142,40 @@
                 </div>
           </div>
         </div>
-        <div class="col-md-5">
-          <h1>Hello test fine gentleman/woman</h1>
-          <p>This is where you can add some text, any text you want</p>
+        <div class="col-md-1">
+          <hr>
+        </div>
+        <div class="col-md-4">
+          <div class="call-us">
+            <p>Call us at <a href="tel:1-800-862-8921">1-800-862-8921</a></p>
+          </div>
+          <div class="online-help">
+            <p>Online Help Center <img src="img/arrow.svg"></img></p>
+            <div class="social-icons">
+              <a href="#" target="_blank">
+                <img src="img/facebook.svg" alt="facebook icon">
+              </a>
+              <a href="#" target="_blank">
+                <img src="img/twitter.svg" alt="twitter icon">
+              </a>
+              <a href="#" target="_blank">
+                <img src="img/linkedin.svg" alt="linkedin icon">
+              </a>
+              <a href="#" target="_blank">
+                <img src="img/youtube.svg" alt="youtube icon" >
+              </a>
+            </div>
+          </div>
+          <div class="small-business-blog">
+            <h3>Small Business Blog</h3>
+            <div class="small-business-text-w-image">
+              <img src="img/small-business.jpg" alt="Small Business Blog Image">
+              <div class="small-business-text">
+                <p>Fresh marketing solutions from small business experts. Find helpful insights and answers to frequently asked questions about online marketing.</p>
+                <p><a href="#" alt="Learn more" target="_blank">Learn more <img src="img/arrow.svg"></a> </img></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
