@@ -23,6 +23,17 @@
       font-weight: 600;
       margin: 0 0 20px;
     }
+    h3 {
+      font-size: 30px;
+      line-height: 37px;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+    }
     a {
       display: block;
       font-size: 16px;
@@ -31,10 +42,16 @@
       text-decoration: none;
       padding: 10px 0;
       font-weight: 300;
+      transition-duration: .5s;
+    }
+    a:hover {
+      text-decoration: none;
+      color: #ae357d;
+      transition-duration: .25s;
     }
     hr {
       width: 1px;
-      height: 400px;
+      height: 440px;
       border-left: 1px solid #000000;
       margin: 0 auto;
     }
@@ -42,6 +59,7 @@
       font-size: 21px;
       font-weight: 300;
       display: inline-block;
+      line-height: 0px;
     }
     .online-help {
       display: flex;
@@ -49,9 +67,7 @@
       justify-content: space-between;
       margin-bottom: 60px;
     }
-    .online-help p {
-      font-size: 18px;
-      font-weight: 600;
+    .online-help h2 {
       margin-bottom: 0;
     }
     .social-icons {
@@ -59,12 +75,11 @@
     }
     .social-icons a {
       margin-left: 10px;
+      transition-duration: .5s;
     }
-    .small-business-blog h3 {
-      font-size: 30px;
-      line-height: 37px;
-      font-weight: 300;
-      margin-bottom: 30px;
+    .social-icons a:hover {
+      opacity: .5;
+      transition-duration: .25s;
     }
     .small-business-blog .small-business-text-w-image {
       display: flex;
@@ -73,7 +88,45 @@
     .small-business-blog .small-business-text-w-image img {
       margin-right: 24px;
     }
-    .small-business-blog .small-business-text {
+    .small-business-blog .small-business-text p, .small-business-blog .small-business-text a {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 300;
+    }
+    .arrow {
+      margin-left: 10px;
+    }
+    .trusted-partners {
+      margin-bottom: 60px;
+    }
+    .trusted-partners a {
+      display: inline-block;
+    }
+    .trusted-partners img{
+      margin-right: 10px;
+    }
+    .our-brands {
+      font-size: 12px;
+    }
+    .our-brands a {
+      display: inline-block;
+      font-size: 12px;
+      margin: 0 5px;
+      padding: 5px 0;
+    }
+    .our-brands a:first-of-type {
+      margin-left: 0;
+    }
+    .our-brands h4 {
+      display: block;
+    }
+    .our-brands .bold-links a {
+      font-weight: 600;
+    }
+    .our-brands p.disclaimer {
+      font-size: 10px;
+      font-weight: 300;
+      margin: 10px 0;
     }
   </style>
   <!-- HTML5 Shiv, this allows older versions of ie9 to accept html5. Must live in the header, below any stylesheets -->
@@ -89,57 +142,57 @@
       <div class="row">
         <div class="col-md-7">
           <div class="row">
-              <div class="col-md-4">
-                  <h2>
-                    Additional Products
-                  </h2>
-                  <a>
-                    Wordpress Website
-                  </a>
-                  <a>
-                    Domains
-                  </a>
-                  <a>
-                    SSL Certificates
-                  </a>
-                  <a>
-                    Business Email
-                  </a>
-                </div>
-                <div class="col-md-4">
-                  <h2>
-                    Company
-                  </h2>
-                  <a>
-                    About us
-                  </a>
-                  <a>
-                    Careers
-                  </a>
-                  <a>
-                    Contact us
-                  </a>
-                  <a>
-                    Partners
-                  </a>
-                  <a>
-                    Reviews
-                  </a>
-                </div>
-                <div class="col-md-4">
-                  <h2>
-                    Enterprise
-                  </h2>
-                  <a>
-                    Franchise & <br>Multi-Location Solutions
-                  </a>
-                  <a>
-                    Healthcare Solutions
-                  </a>
-                  <a>
-                    Professional Services
-                  </a>
-                </div>
+            <div class="col-md-4">
+              <h2>
+                Additional Products
+              </h2>
+              <a>
+                Wordpress Website
+              </a>
+              <a>
+                Domains
+              </a>
+              <a>
+                SSL Certificates
+              </a>
+              <a>
+                Business Email
+              </a>
+            </div>
+            <div class="col-md-4">
+              <h2>
+                Company
+              </h2>
+              <a>
+                About us
+              </a>
+              <a>
+                Careers
+              </a>
+              <a>
+                Contact us
+              </a>
+              <a>
+                Partners
+              </a>
+              <a>
+                Reviews
+              </a>
+            </div>
+            <div class="col-md-4">
+              <h2>
+                Enterprise
+              </h2>
+              <a>
+                Franchise & <br>Multi-Location Solutions
+              </a>
+              <a>
+                Healthcare Solutions
+              </a>
+              <a>
+                Professional Services
+              </a>
+            </div>
           </div>
         </div>
         <div class="col-md-1">
@@ -150,7 +203,7 @@
             <p>Call us at <a href="tel:1-800-862-8921">1-800-862-8921</a></p>
           </div>
           <div class="online-help">
-            <p>Online Help Center <img src="img/arrow.svg"></img></p>
+            <h2>Online Help Center <img src="img/arrow.svg" class="arrow"></h2>
             <div class="social-icons">
               <a href="#" target="_blank">
                 <img src="img/facebook.svg" alt="facebook icon">
@@ -172,15 +225,61 @@
               <img src="img/small-business.jpg" alt="Small Business Blog Image">
               <div class="small-business-text">
                 <p>Fresh marketing solutions from small business experts. Find helpful insights and answers to frequently asked questions about online marketing.</p>
-                <p><a href="#" alt="Learn more" target="_blank">Learn more <img src="img/arrow.svg"></a> </img></p>
+                <p><a href="#" alt="Learn more" target="_blank">Learn more<img src="img/arrow.svg" class="arrow"></a></p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="trusted-partners">
+            <h2>
+              Trusted Partners:
+            </h2>
+            <a href="" target="_blank">
+              <img src="img/google.png" alt="google partner logo">
+            </a>
+            <a href="" target="_blank">
+              <img src="img/bing.png" alt="bing logo">
+            </a>
+            <a href="" target="_blank">
+              <img src="img/bbb.png" alt="better business bureau logo">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="our-brands">
+            <h4>
+              Our Brands
+            </h4>
+            <div class="bold-links">
+              <a href="" alt="Network Solutions" target="_blank">Network Solutions</a>|
+              <a href="" alt="Register.com" target="_blank">Register.com</a>| 
+              <a href="" alt="1ShoppingCart" target="_blank">1ShoppingCart</a>|
+              <a href="" alt="Name Secure" target="_blank">Name Secure</a>|
+              <a href="" alt="Name Bargain" target="_blank">Name Bargain</a>|
+              <a href="" alt="SnapNames" target="_blank">SnapNames</a>
+            </div>
+            <a href="" alt="Legal" target="_blank">Legal</a>|
+            <a href="" alt="Privacy Policy" target="_blank">Privacy Policy</a>| 
+            <a href="" alt="Terms of Use" target="_blank">Terms of Use</a>|
+            <a href="" alt="Web.com Reviews" target="_blank">Web.com Reviews</a>|
+            <a href="" alt="DMCA Policy" target="_blank">DMCA Policy</a>|
+            <a href="" alt="Report Abuse" target="_blank">Report Abuse</a>
+            <a href="" alt="WHOIS" target="_blank">WHOIS</a>|
+            <a href="" alt="Site Map" target="_blank">Site Map</a>|
+            <a href="" alt="Cookie Policy" target="_blank">Cookie Policy</a>
+            <p class="disclaimer">
+              	&copy;2019 Web.com Group, Inc All Rights Reserved. Web.com is a registered trademark of Web.com Group, Inc. All other trademarks herein are the property of their respective owners. 
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
-  <script src="js/scripts.js"></script>
 
 </body>
 </html>
