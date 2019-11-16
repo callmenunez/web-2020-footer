@@ -111,11 +111,12 @@
     .our-brands a {
       display: inline-block;
       font-size: 12px;
-      margin: 0 5px;
       padding: 5px 0;
     }
-    .our-brands a:first-of-type {
-      margin-left: 0;
+    .our-brands .vertical-line {
+      margin: 0 5px;
+      font-size: 12px;
+      display: inline-block;
     }
     .our-brands h4 {
       display: block;
@@ -127,6 +128,84 @@
       font-size: 10px;
       font-weight: 300;
       margin: 10px 0;
+    }
+    .small-business-blog-mobile {
+      display: none;
+    }
+    .small-business-blog-mobile a {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 600;
+      margin: 0 0 20px;
+    }
+    @media screen and (max-width: 414px) {
+      footer {
+        padding-top: 20px;
+      }
+      .dropdown-mobile {
+        margin: 10px 60px ;
+      }
+      .dropdown-mobile h2 {
+        margin-top: 40px;
+      }
+      .small-business-blog-mobile {
+        display: block;
+        margin-bottom: 60px;
+      }
+      .vertical-line {
+        display: none;
+      }
+      .call-us {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .online-help {
+        flex-direction: column;
+      }
+      .online-help h2 {
+        margin-bottom: 20px;
+      }
+      .social-icons {
+        width: 200px;
+        margin: 0 auto;
+        justify-content: space-around;
+      }
+      .social-icons a {
+        margin-left: 0;
+      }
+      .small-business-blog {
+        display: none;
+      }
+      .trusted-partners {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .trusted-partners h2 {
+        margin-bottom: 30px;
+      }
+      .trusted-partners img {
+        margin-right: 0;
+        margin-bottom:20px; 
+      }
+      .our-brands {
+        padding: 0 40px;
+      }
+      .our-brands a {
+        font-size: 14px;
+      }
+      .our-brands p.disclaimer {
+        font-size: 12px;
+      }
+      .our-brands h4 {
+        margin-bottom: 20px;
+      }
+      .our-brands .bold-links {
+        margin-bottom: 20px;
+      }
+      .our-brands p.disclaimer {
+        margin-top: 20px;
+      }
     }
   </style>
   <!-- HTML5 Shiv, this allows older versions of ie9 to accept html5. Must live in the header, below any stylesheets -->
@@ -141,7 +220,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <div class="row">
+          <div class="row dropdown-mobile">
             <div class="col-md-4">
               <h2>
                 Additional Products
@@ -193,9 +272,16 @@
                 Professional Services
               </a>
             </div>
+            <div class="col-sm-12 small-business-blog-mobile">
+              <h2>
+                <a>
+                  Small Business Blog<img src="img/arrow.svg" class="arrow">
+                </a>
+              </h2>
+            </div>
           </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-md-1 vertical-line">
           <hr>
         </div>
         <div class="col-md-4">
@@ -256,21 +342,21 @@
               Our Brands
             </h4>
             <div class="bold-links">
-              <a href="" alt="Network Solutions" target="_blank">Network Solutions</a>|
-              <a href="" alt="Register.com" target="_blank">Register.com</a>| 
-              <a href="" alt="1ShoppingCart" target="_blank">1ShoppingCart</a>|
-              <a href="" alt="Name Secure" target="_blank">Name Secure</a>|
-              <a href="" alt="Name Bargain" target="_blank">Name Bargain</a>|
+              <a href="" alt="Network Solutions" target="_blank">Network Solutions</a><span class="vertical-line">|</span>
+              <a href="" alt="Register.com" target="_blank">Register.com</a><span class="vertical-line">|</span>
+              <a href="" alt="1ShoppingCart" target="_blank">1ShoppingCart</a><span class="vertical-line">|</span>
+              <a href="" alt="Name Secure" target="_blank">Name Secure</a><span class="vertical-line">|</span>
+              <a href="" alt="Name Bargain" target="_blank">Name Bargain</a><span class="vertical-line">|</span>
               <a href="" alt="SnapNames" target="_blank">SnapNames</a>
             </div>
-            <a href="" alt="Legal" target="_blank">Legal</a>|
-            <a href="" alt="Privacy Policy" target="_blank">Privacy Policy</a>| 
-            <a href="" alt="Terms of Use" target="_blank">Terms of Use</a>|
-            <a href="" alt="Web.com Reviews" target="_blank">Web.com Reviews</a>|
-            <a href="" alt="DMCA Policy" target="_blank">DMCA Policy</a>|
-            <a href="" alt="Report Abuse" target="_blank">Report Abuse</a>
-            <a href="" alt="WHOIS" target="_blank">WHOIS</a>|
-            <a href="" alt="Site Map" target="_blank">Site Map</a>|
+            <a href="" alt="Legal" target="_blank">Legal</a><span class="vertical-line">|</span>
+            <a href="" alt="Privacy Policy" target="_blank">Privacy Policy</a><span class="vertical-line">|</span>
+            <a href="" alt="Terms of Use" target="_blank">Terms of Use</a><span class="vertical-line">|</span>
+            <a href="" alt="Web.com Reviews" target="_blank">Web.com Reviews</a><span class="vertical-line">|</span>
+            <a href="" alt="DMCA Policy" target="_blank">DMCA Policy</a><span class="vertical-line">|</span>
+            <a href="" alt="Report Abuse" target="_blank">Report Abuse</a><span class="vertical-line">|</span>
+            <a href="" alt="WHOIS" target="_blank">WHOIS</a><span class="vertical-line">|</span>
+            <a href="" alt="Site Map" target="_blank">Site Map</a><span class="vertical-line">|</span>
             <a href="" alt="Cookie Policy" target="_blank">Cookie Policy</a>
             <p class="disclaimer">
               	&copy;2019 Web.com Group, Inc All Rights Reserved. Web.com is a registered trademark of Web.com Group, Inc. All other trademarks herein are the property of their respective owners. 
