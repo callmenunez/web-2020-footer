@@ -55,6 +55,9 @@
       border-left: 1px solid #000000;
       margin: 0 auto;
     }
+    .main-menu {
+      margin-bottom: 60px;
+    }
     .call-us p, .call-us a {
       font-size: 21px;
       font-weight: 300;
@@ -84,6 +87,7 @@
     .small-business-blog .small-business-text-w-image {
       display: flex;
       align-items: flex-start;
+      margin-bottom: 60px;
     }
     .small-business-blog .small-business-text-w-image img {
       margin-right: 24px;
@@ -136,24 +140,31 @@
       font-size: 18px;
       line-height: 18px;
       font-weight: 600;
-      margin: 0 0 20px;
+    }
+    #additional-products-arrow, #company-arrow, #enterprise-arrow {
+        display: none;
+    }
+    @media screen and (max-width: 768px) {
+      .vertical-line {
+        display: none;
+      }
+      .online-help {
+        justify-content: flex-start;
+      }
     }
     @media screen and (max-width: 414px) {
       footer {
         padding-top: 20px;
       }
-      .dropdown-mobile {
-        margin: 10px 60px ;
+      .main-menu {
+        margin: 10px 50px ;
       }
-      .dropdown-mobile h2 {
+      .main-menu h2 {
         margin-top: 40px;
       }
       .small-business-blog-mobile {
         display: block;
         margin-bottom: 60px;
-      }
-      .vertical-line {
-        display: none;
       }
       .call-us {
         text-align: center;
@@ -206,6 +217,21 @@
       .our-brands p.disclaimer {
         margin-top: 20px;
       }
+      #additional-products-toggle, #company-toggle, #enterprise-toggle {
+        display: none;
+      }
+      h2 {
+        display: flex;
+      }
+      #additional-products-arrow, #company-arrow, #enterprise-arrow {
+        display: block;
+        margin: 0 10px;
+        transition-duration: .5s;
+      }
+      .flip {
+        transform: rotate(-180deg);
+        transition-duration: .5s;
+      }
     }
   </style>
   <!-- HTML5 Shiv, this allows older versions of ie9 to accept html5. Must live in the header, below any stylesheets -->
@@ -220,61 +246,67 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <div class="row dropdown-mobile">
-            <div class="col-md-4">
-              <h2>
-                Additional Products
+          <div class="row main-menu">
+            <div class="col-sm-4">
+              <h2 id="additional-products">
+                Additional Products <img id="additional-products-arrow" src="img/mobile-arrow.svg">
               </h2>
-              <a>
-                Wordpress Website
-              </a>
-              <a>
-                Domains
-              </a>
-              <a>
-                SSL Certificates
-              </a>
-              <a>
-                Business Email
-              </a>
+              <div id="additional-products-toggle">
+                <a href="#" target="_blank" alt="">
+                  Wordpress Website
+                </a>
+                <a href="#" target="_blank" alt="">
+                  Domains
+                </a>
+                <a href="#" target="_blank" alt="">
+                  SSL Certificates
+                </a>
+                <a href="#" target="_blank" alt="">
+                  Business Email
+                </a>
+              </div>
             </div>
-            <div class="col-md-4">
-              <h2>
-                Company
+            <div class="col-sm-4">
+              <h2 id="company">
+                Company <img id="company-arrow" src="img/mobile-arrow.svg">
               </h2>
-              <a>
+              <div id="company-toggle">
+              <a href="#" target="_blank" alt="">
                 About us
               </a>
-              <a>
+              <a href="#" target="_blank" alt="">
                 Careers
               </a>
-              <a>
+              <a href="#" target="_blank" alt="">
                 Contact us
               </a>
-              <a>
+              <a href="#" target="_blank" alt="">
                 Partners
               </a>
-              <a>
+              <a href="#" target="_blank" alt="">
                 Reviews
               </a>
             </div>
-            <div class="col-md-4">
-              <h2>
-                Enterprise
+            </div>
+            <div class="col-sm-4">
+              <h2 id="enterprise">
+                Enterprise <img id="enterprise-arrow" src="img/mobile-arrow.svg">
               </h2>
-              <a>
-                Franchise & <br>Multi-Location Solutions
-              </a>
-              <a>
-                Healthcare Solutions
-              </a>
-              <a>
-                Professional Services
-              </a>
+              <div id="enterprise-toggle">
+                <a href="#" target="_blank" alt="">
+                  Franchise & <br>Multi-Location Solutions
+                </a>
+                <a href="#" target="_blank" alt="">
+                  Healthcare Solutions
+                </a>
+                <a href="#" target="_blank" alt="">
+                  Professional Services
+                </a>
+              </div>
             </div>
             <div class="col-sm-12 small-business-blog-mobile">
               <h2>
-                <a>
+                <a href="#" target="_blank" alt="">
                   Small Business Blog<img src="img/arrow.svg" class="arrow">
                 </a>
               </h2>
@@ -291,16 +323,16 @@
           <div class="online-help">
             <h2>Online Help Center <img src="img/arrow.svg" class="arrow"></h2>
             <div class="social-icons">
-              <a href="#" target="_blank">
+              <a href="https://www.facebook.com/Web.com/" target="_blank">
                 <img src="img/facebook.svg" alt="facebook icon">
               </a>
-              <a href="#" target="_blank">
+              <a href="https://twitter.com/webdotcom?lang=en" target="_blank">
                 <img src="img/twitter.svg" alt="twitter icon">
               </a>
-              <a href="#" target="_blank">
+              <a href="https://www.linkedin.com/company/website-pros/" target="_blank">
                 <img src="img/linkedin.svg" alt="linkedin icon">
               </a>
-              <a href="#" target="_blank">
+              <a href="https://www.youtube.com/channel/UCaNFfNILv9qaoiAOsoQuSgg" target="_blank">
                 <img src="img/youtube.svg" alt="youtube icon" >
               </a>
             </div>
@@ -323,13 +355,13 @@
             <h2>
               Trusted Partners:
             </h2>
-            <a href="" target="_blank">
+            <a href="https://www.google.com/partners/agency?id=2797033327" target="_blank">
               <img src="img/google.png" alt="google partner logo">
             </a>
-            <a href="" target="_blank">
+            <a href="https://www.bing.com/" target="_blank">
               <img src="img/bing.png" alt="bing logo">
             </a>
-            <a href="" target="_blank">
+            <a href="https://www.bbb.org/us/fl/jacksonville/profile/computer-system-designers/webcom-group-inc-0403-12340#sealclick" target="_blank">
               <img src="img/bbb.png" alt="better business bureau logo">
             </a>
           </div>
@@ -342,22 +374,22 @@
               Our Brands
             </h4>
             <div class="bold-links">
-              <a href="" alt="Network Solutions" target="_blank">Network Solutions</a><span class="vertical-line">|</span>
-              <a href="" alt="Register.com" target="_blank">Register.com</a><span class="vertical-line">|</span>
-              <a href="" alt="1ShoppingCart" target="_blank">1ShoppingCart</a><span class="vertical-line">|</span>
-              <a href="" alt="Name Secure" target="_blank">Name Secure</a><span class="vertical-line">|</span>
-              <a href="" alt="Name Bargain" target="_blank">Name Bargain</a><span class="vertical-line">|</span>
-              <a href="" alt="SnapNames" target="_blank">SnapNames</a>
+              <a href="https://www.networksolutions.com/" alt="Network Solutions" target="_blank">Network Solutions</a><span class="vertical-line">|</span>
+              <a href="https://www.register.com/" alt="Register.com" target="_blank">Register.com</a><span class="vertical-line">|</span>
+              <a href="http://www.1shoppingcart.com/" alt="1ShoppingCart" target="_blank">1ShoppingCart</a><span class="vertical-line">|</span>
+              <a href="https://www.namesecure.com/home.page" alt="Name Secure" target="_blank">Name Secure</a><span class="vertical-line">|</span>
+              <a href="http://namebargain.com/" alt="Name Bargain" target="_blank">Name Bargain</a><span class="vertical-line">|</span>
+              <a href="https://www.snapnames.com/" alt="SnapNames" target="_blank">SnapNames</a>
             </div>
-            <a href="" alt="Legal" target="_blank">Legal</a><span class="vertical-line">|</span>
-            <a href="" alt="Privacy Policy" target="_blank">Privacy Policy</a><span class="vertical-line">|</span>
-            <a href="" alt="Terms of Use" target="_blank">Terms of Use</a><span class="vertical-line">|</span>
-            <a href="" alt="Web.com Reviews" target="_blank">Web.com Reviews</a><span class="vertical-line">|</span>
-            <a href="" alt="DMCA Policy" target="_blank">DMCA Policy</a><span class="vertical-line">|</span>
-            <a href="" alt="Report Abuse" target="_blank">Report Abuse</a><span class="vertical-line">|</span>
-            <a href="" alt="WHOIS" target="_blank">WHOIS</a><span class="vertical-line">|</span>
-            <a href="" alt="Site Map" target="_blank">Site Map</a><span class="vertical-line">|</span>
-            <a href="" alt="Cookie Policy" target="_blank">Cookie Policy</a>
+            <a href="https://legal.web.com/" alt="Legal" target="_blank">Legal</a><span class="vertical-line">|</span>
+            <a href="https://legal.web.com/Document/Get/PrivacyPolicy" alt="Privacy Policy" target="_blank">Privacy Policy</a><span class="vertical-line">|</span>
+            <a href="https://legal.web.com/Document/Get/TermsOfUse" alt="Terms of Use" target="_blank">Terms of Use</a><span class="vertical-line">|</span>
+            <a href="https://www.web.com/reviews" alt="Web.com Reviews" target="_blank">Web.com Reviews</a><span class="vertical-line">|</span>
+            <a href="https://assets.web.com/legal/English/DMCAPolicy.pdf" alt="DMCA Policy" target="_blank">DMCA Policy</a><span class="vertical-line">|</span>
+            <a href="https://abuse.web.com/" alt="Report Abuse" target="_blank">Report Abuse</a><span class="vertical-line">|</span>
+            <a href="https://whois.web.com/" alt="WHOIS" target="_blank">WHOIS</a><span class="vertical-line">|</span>
+            <a href="https://www.web.com/resources/sitemap" alt="Site Map" target="_blank">Site Map</a><span class="vertical-line">|</span>
+            <a href="https://assets.web.com/legal/English/CookiePolicy.pdf" alt="Cookie Policy" target="_blank">Cookie Policy</a>
             <p class="disclaimer">
               	&copy;2019 Web.com Group, Inc All Rights Reserved. Web.com is a registered trademark of Web.com Group, Inc. All other trademarks herein are the property of their respective owners. 
             </p>
@@ -366,6 +398,23 @@
       </div>
     </div>
   </footer>
-
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+    // additional products
+    $( "#additional-products" ).click(function() {
+      $( "#additional-products-toggle" ).toggle( {duration: 200});
+      $( "#additional-products-arrow" ).toggleClass('flip');
+    });
+    // company
+    $( "#company" ).click(function() {
+      $( "#company-toggle" ).toggle( {duration: 200});
+      $( "#company-arrow" ).toggleClass('flip');
+    });
+    // enterprise
+    $( "#enterprise" ).click(function() {
+      $( "#enterprise-toggle" ).toggle( {duration: 200});
+      $( "#enterprise-arrow" ).toggleClass('flip');
+    });
+  </script>
 </body>
 </html>
