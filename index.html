@@ -79,18 +79,17 @@
     .social-icons a {
       margin-left: 10px;
       transition-duration: .5s;
+      line-height: normal;
     }
     .social-icons a:hover {
       opacity: .5;
       transition-duration: .25s;
     }
-    .small-business-blog .small-business-text-w-image {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 60px;
+    .small-business-blog {
+      margin-bottom: 50px;
     }
-    .small-business-blog .small-business-text-w-image img {
-      margin-right: 24px;
+    .small-business-blog .small-business-image img {
+      width: 100%;
     }
     .small-business-blog .small-business-text p, .small-business-blog .small-business-text a {
       font-size: 16px;
@@ -102,12 +101,16 @@
     }
     .trusted-partners {
       margin-bottom: 60px;
+      display: flex;
+    }
+    #trusted-partners-bbblink {
+      margin-top: 10px;
     }
     .trusted-partners a {
       display: inline-block;
     }
     .trusted-partners img{
-      margin-right: 10px;
+      margin: 0 6px;
     }
     .our-brands {
       font-size: 12px;
@@ -143,13 +146,19 @@
     }
     #additional-products-arrow, #company-arrow, #enterprise-arrow {
         display: none;
+        margin-bottom: 40px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 991px) {
       .vertical-line {
         display: none;
       }
       .online-help {
         justify-content: flex-start;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      #company, #enterprise {
+        margin-top: 40px;
       }
     }
     @media screen and (max-width: 414px) {
@@ -187,6 +196,10 @@
       .small-business-blog {
         display: none;
       }
+      #trusted-partners {
+        text-align: center;
+        display: block;
+      }
       .trusted-partners {
         display: flex;
         flex-direction: column;
@@ -196,8 +209,7 @@
         margin-bottom: 30px;
       }
       .trusted-partners img {
-        margin-right: 0;
-        margin-bottom:20px; 
+        margin-top: 20px; 
       }
       .our-brands {
         padding: 0 40px;
@@ -252,16 +264,19 @@
                 Additional Products <img id="additional-products-arrow" src="img/mobile-arrow.svg">
               </h2>
               <div id="additional-products-toggle">
-                <a href="#" target="_blank" alt="">
+                <a href="https://web.com/websites/wordpressWebsite" alt="Wordpress Website">
                   Wordpress Website
                 </a>
-                <a href="#" target="_blank" alt="">
+                <a href="https://www.web.com/websites/hosting" alt="Website Hosting">
+                  Website Hosting
+                </a>
+                <a href="https://www.web.com/websites/domains" alt="Domains">
                   Domains
                 </a>
-                <a href="#" target="_blank" alt="">
+                <a href="https://www.web.com/websites/make-my-website-secure" alt="SSL Certificates">
                   SSL Certificates
                 </a>
-                <a href="#" target="_blank" alt="">
+                <a href="https://www.web.com/email-service/business-email" alt="Business Email">
                   Business Email
                 </a>
               </div>
@@ -271,19 +286,19 @@
                 Company <img id="company-arrow" src="img/mobile-arrow.svg">
               </h2>
               <div id="company-toggle">
-              <a href="#" target="_blank" alt="">
+              <a href="https://www.web.com/about-us" alt="About Us">
                 About us
               </a>
-              <a href="#" target="_blank" alt="">
+              <a href="https://www.web.com/about-us/careers" alt="Careers">
                 Careers
               </a>
-              <a href="#" target="_blank" alt="">
+              <a href="https://www.web.com/about-us/contact-us" alt="Contact Us">
                 Contact us
               </a>
-              <a href="#" target="_blank" alt="">
+              <a href="https://www.web.com/partnerships" alt="Partners">
                 Partners
               </a>
-              <a href="#" target="_blank" alt="">
+              <a href="https://www.web.com/reviews" alt="Reviews">
                 Reviews
               </a>
             </div>
@@ -293,20 +308,20 @@
                 Enterprise <img id="enterprise-arrow" src="img/mobile-arrow.svg">
               </h2>
               <div id="enterprise-toggle">
-                <a href="#" target="_blank" alt="">
+                <a href="https://www.web.com/for-enterprise" alt="Franchise & Multi-Location Solutions">
                   Franchise & <br>Multi-Location Solutions
                 </a>
-                <a href="#" target="_blank" alt="">
+                <a href="https://www.web.com/for-enterprise/healthcare-marketing" alt="Healthcare Solutions">
                   Healthcare Solutions
                 </a>
-                <a href="#" target="_blank" alt="">
-                  Professional Services
+                <a href="https://www.websitedevelopment.com" alt="Professional Design Services">
+                  Professional Design Services
                 </a>
               </div>
             </div>
             <div class="col-sm-12 small-business-blog-mobile">
               <h2>
-                <a href="#" target="_blank" alt="">
+                <a href="https://www.web.com/blog/" target="_blank" alt="Small Business Blog">
                   Small Business Blog<img src="img/arrow.svg" class="arrow">
                 </a>
               </h2>
@@ -321,7 +336,9 @@
             <p>Call us at <a href="tel:1-800-862-8921">1-800-862-8921</a></p>
           </div>
           <div class="online-help">
-            <h2>Online Help Center <img src="img/arrow.svg" class="arrow"></h2>
+            <a href="https://knowledge.web.com/" target="_blank">
+              <h2>Online Help Center <img src="img/arrow.svg" class="arrow"></h2>
+            </a>
             <div class="social-icons">
               <a href="https://www.facebook.com/Web.com/" target="_blank">
                 <img src="img/facebook.svg" alt="facebook icon">
@@ -338,12 +355,14 @@
             </div>
           </div>
           <div class="small-business-blog">
-            <h3>Small Business Blog</h3>
-            <div class="small-business-text-w-image">
-              <img src="img/small-business.jpg" alt="Small Business Blog Image">
-              <div class="small-business-text">
+              <h3>Small Business Blog</h3>
+            <div class="row ">
+              <div class="col-md-6 col-xs-3 small-business-image">
+                <img src="img/small-business.jpg" alt="Small Business Blog Image">
+              </div>
+              <div class="col-md-6 col-xs-9 small-business-text">
                 <p>Fresh marketing solutions from small business experts. Find helpful insights and answers to frequently asked questions about online marketing.</p>
-                <p><a href="#" alt="Learn more" target="_blank">Learn more<img src="img/arrow.svg" class="arrow"></a></p>
+                <p><a href="https://www.web.com/blog" alt="Learn more" target="_blank">Learn more<img src="img/arrow.svg" class="arrow"></a></p>
               </div>
             </div>
           </div>
@@ -351,19 +370,52 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <div class="trusted-partners">
-            <h2>
+          
+            <h2 id="trusted-partners">
               Trusted Partners:
             </h2>
-            <a href="https://www.google.com/partners/agency?id=2797033327" target="_blank">
-              <img src="img/google.png" alt="google partner logo">
-            </a>
+            <div class="trusted-partners">
+            <style>
+              .google-wrap {
+                width: 176px;
+                height: 66px;
+                padding: 0;
+                overflow: hidden;
+              }
+
+              .google-wrap iframe {
+                width: 220px;
+                height: 82px;
+                border: 0;
+
+                -ms-transform: scale(0.8);
+                -moz-transform: scale(0.8);
+                -o-transform: scale(0.8);
+                -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+
+                -ms-transform-origin: 0 0;
+                -moz-transform-origin: 0 0;
+                -o-transform-origin: 0 0;
+                -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+              }
+          </style>
+          <script src="https://apis.google.com/js/platform.js" async defer></script>
+          <div class="g-partnersbadge" data-agency-id="2797033327"></div>
+          <!-- Add the code snippet above to the sites listed to display your badge: https://www.web.com/ -->
+
             <a href="https://www.bing.com/" target="_blank">
               <img src="img/bing.png" alt="bing logo">
             </a>
-            <a href="https://www.bbb.org/us/fl/jacksonville/profile/computer-system-designers/webcom-group-inc-0403-12340#sealclick" target="_blank">
+            <div id="trusted-partners-bbblink">
+              <script type="text/javascript" src="https://seal-northeastflorida.bbb.org/inc/legacy.js"></script>
+              <a href="https://www.bbb.org/us/fl/jacksonville/profile/computer-system-designers/web-com-group-inc-0403-12340/#sealclick" id="bbblink" class="ruhzbum" target="_blank" rel="nofollow">
+              <img src="https://seal-northeastflorida.bbb.org/logo/ruhzbum/bbb-12340.png" style="border:0; height:68px; margin-top:0;" alt="Web.com Group Inc. BBB Business Review"/></a>
+            </div>
+            <!-- <a href="https://www.bbb.org/us/fl/jacksonville/profile/computer-system-designers/webcom-group-inc-0403-12340#sealclick" target="_blank">
               <img src="img/bbb.png" alt="better business bureau logo">
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
