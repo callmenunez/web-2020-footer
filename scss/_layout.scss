@@ -1,1 +1,294 @@
 // Header, footer, navigation, section 
+.footer {
+  background: #CFE0FD;
+  color: #000000;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  padding: 80px 0;
+  hr {
+    width: 1px;
+    height: 440px;
+    border-left: 1px solid #000000;
+    margin: 0 auto 40px;
+  }
+  .arrow {
+    margin-left: 10px;
+  }
+  &__mainMenu {
+    margin-bottom: 60px;
+    #additional-products, #company, #enterprise {
+      &-arrow {
+        display: none;
+        margin-bottom: 40px;
+      }  
+    }
+  }
+  &__header {
+    font-size: 18px; 
+    line-height: 18px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    &--onlineHelp {
+      font-size: 18px; 
+      line-height: 18px;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+  &__textLink {
+    display: block;
+    font-size: 16px;
+    line-height: 18px;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: 300;
+    transition-duration: .5s;
+    &:hover {
+      text-decoration: none;
+      color: #ae357d;
+      transition-duration: .25s;
+    }
+  }
+  &__callUsText {
+    font-size: 21px;
+    font-weight: 300;
+    display: inline-block;
+    line-height: 0px;
+    color: #000000;
+    margin-bottom: 14px;
+    &--link {
+      font-size: 21px;
+      font-weight: 300;
+      display: inline-block;
+      line-height: 0px;
+      color: #000000;
+      margin-bottom: 14px;
+      &:hover {
+        text-decoration: none;
+        color: #ae357d;
+        transition-duration: .25s;
+      }
+    }
+  }
+  &__onlineHelp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    &--link {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 600;
+      margin: 0;
+      color: #000000;
+      &:hover {
+        text-decoration: none;
+        color: #ae357d;
+        transition-duration: .25s;
+      }
+    }
+  }
+  &__socialIconsSection {
+    display: flex;
+  }
+  &__socialIconsLink {
+    margin-left: 10px;
+    transition-duration: .5s;
+    line-height: normal;
+    &:hover {
+      opacity: .5;
+      transition-duration: .25s;
+    }
+  }
+  &__smallBusinessBlog {
+    margin-bottom: 50px;
+  }
+  &__smallBusinessBlogHeader {
+    font-size: 30px;
+    line-height: 37px;
+    font-weight: 300;
+    margin: 20px 0 30px;
+  }
+  &__smallBusinessBlogImage {
+    width: 100%;
+  }
+  &__smallBusinessBlogText {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    &--link {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 300;
+      color: #000000;
+      &:hover {
+        text-decoration: none;
+        color: #ae357d;
+        transition-duration: .25s;
+      }
+    }
+  }
+  &__smallBusinessBlogMobile {
+    display: none;
+  }
+  &__trustedPartners {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    #trusted-partners-bbblink {
+      margin-top: 10px;
+    }
+  }
+  &__trustedPartnersLink {
+    display: inline-block;
+  }
+  &__trustedPartnersImage {
+    margin: 0 6px;
+  }
+  &__ourBrands {
+    font-size: 12px;
+  }
+  &__ourBrandsHeader {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  &__ourBrandsLink {
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 0;
+    color: #000000;
+    font-weight: 300;
+    &:hover {
+      text-decoration: none;
+      color: #ae357d;
+      transition-duration: .25s;
+    }
+    &--bold {
+      font-weight: 600;
+    }
+  }
+  &__ourBrandsDisclaimer {
+    font-size: 10px;
+    font-weight: 300;
+    margin: 10px 0;
+  }
+  &__ourBrandsVerticalLine {
+    margin: 0 5px;
+    font-size: 12px;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer {
+    .vertical-line {
+      display: none;
+    }
+    &__onlineHelp {
+      justify-content: flex-start;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    #company, #enterprise {
+      margin-top: 40px;
+    }
+  }
+}
+@media screen and (max-width: 414px) {
+  .footer {
+    padding-top: 20px;
+    &__mainMenu {
+      margin: 10px 65px;
+      #additional-products, #company, #enterprise {
+        &-toggle {
+          display: none;
+        }
+        &-arrow {
+          display: inline-block;
+          margin: 0 10px;
+          transition-duration: .5s;
+        }
+      }
+      .flip {
+        transform: rotate(-180deg);
+        transition-duration: .5s;
+      }
+    }
+    &__header {
+      margin-top: 40px;
+      &--onlineHelp {
+        margin: 10px 0 40px;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+      }
+      &--trustedPartners{
+        text-align: center;
+        display: block;
+      }
+    }
+    &__callUs {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    &__callUsText {
+      margin-bottom: 0;
+    }
+    &__onlineHelp {
+      flex-direction: column;
+      margin: 30px 0 40px;
+    }
+    &__socialIconsSection {
+      width: 200px;
+      margin: 0 auto;
+      justify-content: space-around;
+    }
+    &__socialIconsLink {
+      margin-left: 0;
+    }
+    &__smallBusinessBlog {
+      display: none;
+    }
+    &__smallBusinessBlogMobile {
+      display: block;
+      margin: 40px 0 60px;
+      &--link {
+        color: #000000;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+      }
+    }
+    &__trustedPartners {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      #trusted-partners-bbblink {
+        margin-top: 25px;
+      }
+    }
+    &__trustedPartnersImage {
+      margin-top: 20px; 
+    }
+    &__ourBrands {
+      padding: 0 40px;
+      &--firstSection {
+        margin-bottom: 20px;
+      }
+    }
+    &__ourBrandsHeader {
+      margin-bottom: 20px;
+    }
+    &__ourBrandsLink {
+      font-size: 14px;
+    }
+    &__ourBrandsDisclaimer {
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  }
+}
